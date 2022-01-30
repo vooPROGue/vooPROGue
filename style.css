@@ -1,5 +1,5 @@
 body {
-  background-color: #171717 !important;
+  background-color: #bb3030 !important;
   overflow-x: hidden;
 }
 
@@ -100,7 +100,7 @@ title {
 
 /* ### main Menu Overlay */
 .mainMenuOverlay {
-  background: #171717;
+  background: #bb3030;
   position: fixed;
   left: 0;
   right: 0;
