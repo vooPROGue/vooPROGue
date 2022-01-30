@@ -1,3 +1,4 @@
+// floating menu
 (function(factory) {
     /* global define */
     if ( typeof define === 'function' && define.amd ) {
@@ -125,3 +126,11 @@
   }));
 
 
+	var $svg = $('svg').drawsvg();
+	$svg.drawsvg('animate');	
+  $(".toggleMenu").on('click', function(){
+    $("#mainMenu").toggleClass('open');
+
+   });
+  //  end floating menu
+ 
