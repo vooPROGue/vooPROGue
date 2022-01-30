@@ -1,0 +1,841 @@
+$mainbodybgcolor: #171717;
+
+body {
+  background-color: $mainbodybgcolor !important;
+  overflow-x: hidden;
+}
+
+title {
+  font-size: 20em;
+}
+
+#Layer_1 {
+  width: 20%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  animation-name: vmove, vup;
+  animation-delay: 2.2s;
+  animation-duration: 2.4s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+@keyframes vmove {
+  0% {
+    margin: auto;
+    opacity: 1;
+  }
+  100% {
+    left: -85%;
+    width: 15%;
+    opacity: 0;
+  }
+}
+
+.slidelogo {
+  position: absolute;
+  margin-top: 10%;
+  margin-left: -80%;
+  width: 50%;
+  animation-name: slidein;
+  animation-delay: 3.7s;
+  animation-duration: 4s;
+  animation-fill-mode: forwards;
+}
+@keyframes slidein {
+  100% {
+    margin-left: 6%;
+  }
+}
+
+@keyframes bubbles {
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    display: block;
+  }
+}
+
+/* ### main Menu Overlay */
+.mainMenuOverlay {
+  background: $mainbodybgcolor;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: -320px;
+  z-index: 3;
+  height: 320px;
+  box-shadow: 0 0 15px -3px #03374a;
+  border-radius: 100% 100% 0 0 / 80% 80% 0 0;
+  transition: bottom 0.5s ease;
+  transition: bottom 0.5s ease;
+}
+
+.mainMenuOverlay.open {
+  bottom: 0;
+}
+
+.mainMenuOverlay .toggleMenu {
+  display: block;
+  background: "./images/menulogo.png" no-repeat center;
+  background-size: 3em auto;
+  border: 1px solid #33ffff;
+  border-radius: 50%;
+  width: 4em;
+  height: 4em;
+  position: absolute;
+
+  left: 50%;
+  margin: -4em 0 0 -2em;
+  cursor: pointer;
+
+  box-shadow: 0 0 0 6px rgba(255, 255, 255, 0.2) inset, 0 0 16px -4px #063343;
+  transition: box-shadow 0.5s ease, top 0.5s ease;
+  transition: box-shadow 0.5s ease, top 0.5s ease;
+}
+
+.mainMenuOverlay.open .toggleMenu {
+  top: 50%;
+  border: 1px solid #33ffff;
+}
+
+.mainMenuOverlay .itemMenuBox {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -31px 0 0 -31px;
+  height: 62px;
+  width: 142px;
+  text-align: right;
+  border-radius: 40px;
+  -webkit-transform-origin: 31px 31px;
+  -ms-transform-origin: 31px 31px;
+  transform-origin: 31px 31px;
+  transition: all 1s ease 0.4s;
+  transition: all 1s ease 0.4s;
+}
+
+.mainMenuOverlay.open .itemMenuBox {
+  width: 182px;
+  transition: all 1s ease 0s;
+  transition: all 1s ease 0s;
+}
+
+.mainMenuOverlay .itemMenuBox.portfolio {
+  -webkit-transform: rotate(270deg);
+  -ms-transform: rotate(270deg);
+  transform: rotate(270deg);
+}
+
+.mainMenuOverlay .itemMenuBox.contact {
+  -webkit-transform: rotate(330deg);
+  -ms-transform: rotate(330deg);
+  transform: rotate(330deg);
+}
+
+.mainMenuOverlay .itemMenuBox.info {
+  -webkit-transform: rotate(210deg);
+  -ms-transform: rotate(210deg);
+  transform: rotate(210deg);
+}
+
+.mainMenuOverlay .itemMenuBox .itemMenu {
+  display: inline-block;
+  border: 1px solid #33ffff;
+  border-radius: 40px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  box-shadow: 0 0 0 6px rgba(255, 255, 255, 0.2) inset, 0 0 16px -4px #063343;
+  width: 62px;
+  height: 62px;
+  border-radius: 40px;
+  transition: all 0.8s ease;
+  color: #fff;
+  font-size: 28px;
+  line-height: 64px;
+  text-align: center;
+}
+
+.mainMenuOverlay .itemMenuBox.portfolio .itemMenu {
+  background-image: url("file:///C:/Users/tsixl/Documents/vscode/vooPROGueSITE/images/plogo.png");
+  background-size: 0.6em auto;
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
+.mainMenuOverlay .itemMenuBox.contact .itemMenu {
+  background-image: url("file:///C:/Users/tsixl/Documents/vscode/vooPROGueSITE/images/clogo.png");
+  background-size: 0.7em auto;
+  -webkit-transform: rotate(30deg);
+  -ms-transform: rotate(30deg);
+  transform: rotate(30deg);
+}
+
+.mainMenuOverlay .itemMenuBox.info .itemMenu {
+  background-image: url("file:///C:/Users/tsixl/Documents/vscode/vooPROGueSITE/images/ilogo.png");
+  background-size: 0.3em auto;
+  -webkit-transform: rotate(150deg);
+  -ms-transform: rotate(150deg);
+  transform: rotate(150deg);
+}
+
+/* Hover */
+.mainMenuOverlay .itemMenuBox.portfolio .itemMenu:hover {
+  -webkit-transform: rotate(450deg);
+  -ms-transform: rotate(450deg);
+  transform: rotate(450deg);
+  width: 2.5em;
+  height: 2.5em;
+  border-radius: 50%;
+}
+
+.mainMenuOverlay .itemMenuBox.contact .itemMenu:hover {
+  -webkit-transform: rotate(390deg);
+  -ms-transform: rotate(390deg);
+  transform: rotate(390deg);
+  width: 2.5em;
+  height: 2.5em;
+  border-radius: 50%;
+}
+
+.mainMenuOverlay .itemMenuBox.info .itemMenu:hover {
+  -webkit-transform: rotate(510deg);
+  -ms-transform: rotate(510deg);
+  transform: rotate(510deg);
+  width: 2.5em;
+  height: 2.5em;
+  border-radius: 50%;
+}
+
+.floating {
+  animation-name: Floatingx;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  -moz-animation-name: Floating;
+  -moz-animation-duration: 3s;
+  -moz-animation-iteration-count: infinite;
+  -moz-animation-timing-function: ease-in-out;
+}
+
+@keyframes Floatingx {
+  from {
+    -webkit-transform: translate(0, 0px);
+  }
+  65% {
+    -webkit-transform: translate(0, 5px);
+  }
+  to {
+    -webkit-transform: translate(0, -0px);
+  }
+}
+
+@keyframes Floating {
+  from {
+    -moz-transform: translate(0, 0px);
+  }
+  65% {
+    -moz-transform: translate(0, 5px);
+  }
+  to {
+    -moz-transform: translate(0, -0px);
+  }
+}
+
+.floating2 {
+  animation-name: Floatingx2;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  -moz-animation-name: Floating2;
+  -moz-animation-duration: 3s;
+  -moz-animation-iteration-count: infinite;
+  -moz-animation-timing-function: ease-in-out;
+}
+
+@keyframes Floatingx2 {
+  from {
+    -webkit-transform: translate(0, 0px);
+  }
+  45% {
+    -webkit-transform: translate(0, 8px);
+  }
+  to {
+    -webkit-transform: translate(0, -0px);
+  }
+}
+
+@keyframes Floating2 {
+  from {
+    -moz-transform: translate(0, 0px);
+  }
+  45% {
+    -moz-transform: translate(0, 8px);
+  }
+  to {
+    -moz-transform: translate(0, -0px);
+  }
+}
+
+.floating3 {
+  animation-name: Floatingx3;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  -moz-animation-name: Floating3;
+  -moz-animation-duration: 3s;
+  -moz-animation-iteration-count: infinite;
+  -moz-animation-timing-function: ease-in-out;
+}
+
+@keyframes Floatingx3 {
+  from {
+    -webkit-transform: translate(0, 0px);
+  }
+  50% {
+    -webkit-transform: translate(2px, 4px);
+  }
+  to {
+    -webkit-transform: translate(0, -0px);
+  }
+}
+
+@keyframes Floating3 {
+  from {
+    -moz-transform: translate(0, 0px);
+  }
+  50% {
+    -moz-transform: translate(2px, 4px);
+  }
+  to {
+    -moz-transform: translate(0, -0px);
+  }
+}
+
+/* signature */
+.signatureBox {
+  text-align: right;
+  padding: 4px;
+}
+.signatureBox.fixed {
+  position: fixed;
+  bottom: 8px;
+  right: 8px;
+}
+.signature,
+.signature a {
+  color: #484848;
+}
+.signature:before,
+.signature:after {
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: bottom;
+  transition: all 0.5s;
+  transition: all 0.5s;
+  width: 11px;
+}
+.signature:before {
+  content: "Mahmoud";
+}
+.signature:after {
+  content: "NBET";
+  margin-left: 0px;
+  width: 10px;
+}
+
+.signature:hover {
+  color: #484848;
+}
+.signature:hover:before {
+  width: 76px;
+}
+.signature:hover:after {
+  width: 34px;
+  margin-left: 3px;
+}
+
+.slidercont {
+  background-color: #7a7978;
+  position: absolute;
+  margin-top: 0;
+  margin-left: 100%;
+  width: 98%;
+  height: 97vh;
+  display: none;
+  z-index: 4;
+}
+.close1 {
+  background: url("file:///C:/Users/tsixl/Documents/vscode/vooPROGueSITE/images/backarrow.png")
+    no-repeat center;
+  cursor: pointer;
+  background-size: 4em auto;
+  border-radius: 50%;
+  position: absolute;
+  margin-top: 2vh;
+  margin-left: 97%;
+  z-index: 6;
+  width: 3em;
+  height: 3em;
+}
+.sliderport {
+  background-color: #7a7978;
+  position: absolute;
+  width: 98%;
+  height: 97vh;
+  z-index: 4;
+  display: none;
+  margin-left: 1%;
+}
+.close2 {
+  background: url("file:///C:/Users/tsixl/Documents/vscode/vooPROGueSITE/images/backarrow.png")
+    no-repeat center;
+  cursor: pointer;
+  background-size: 4em auto;
+  border-radius: 50%;
+  position: absolute;
+  margin-top: 2vh;
+  margin-left: 97%;
+  z-index: 6;
+  width: 3em;
+  height: 3em;
+}
+
+.sliderinfo {
+  background-color: #7a7978;
+  position: absolute;
+  margin-top: 0;
+  margin-left: -100%;
+  width: 98%;
+  height: 97vh;
+  display: none;
+  z-index: 4;
+}
+.close3 {
+  background: url("file:///C:/Users/tsixl/Documents/vscode/vooPROGueSITE/images/backarrow.png")
+    no-repeat center;
+  cursor: pointer;
+  background-size: 4em auto;
+  border-radius: 50%;
+  position: absolute;
+  margin-top: 2vh;
+  margin-left: 97%;
+  z-index: 6;
+  width: 3em;
+  height: 3em;
+}
+.commons {
+  position: absolute;
+  width: 70%;
+  height: 25vh;
+  top: 0;
+  bottom: 35%;
+  right: 10%;
+  margin: auto;
+  border: dotted 1px #33ffff;
+  z-index: 6;
+}
+.eshops {
+  position: absolute;
+  width: 70%;
+  height: 25vh;
+  top: 35%;
+  bottom: 0;
+  left: 10%;
+  margin: auto;
+  border: dotted 1px #33ffff;
+  z-index: 6;
+}
+.instalogo {
+  position: absolute;
+  width: 3.2em;
+  height: 3.2em;
+  border-radius: 50%;
+  margin-left: 110%;
+  margin-top: 4%;
+  border: dotted 2px #f400a5;
+  display: none;
+}
+.twitterlogo {
+  position: absolute;
+  width: 3.2em;
+  height: 3.2em;
+  border-radius: 50%;
+  margin-left: 110%;
+  margin-top: 8%;
+  border: dotted 2px #f400a5;
+  display: none;
+}
+
+@media screen and (max-width: 1280px) {
+  .instalogo {
+    transform: scale(0.8);
+    margin-left: 108%;
+    margin-top: 3%;
+  }
+  .twitterlogo {
+    transform: scale(0.8);
+    margin-left: 108%;
+    margin-top: 9%;
+  }
+}
+
+.fullcommonsites {
+  position: absolute;
+  margin-left: 102%;
+  background-color: #bfbfbf;
+  width: 98%;
+  height: 97vh;
+  z-index: 5;
+  display: grid;
+  grid-template-columns: 24em 24em 24em;
+  grid-template-rows: 17em 17em 17em;
+  align-content: center;
+  justify-content: center;
+}
+.close4 {
+  background: url("file:///C:/Users/tsixl/Documents/vscode/vooPROGueSITE/images/backarrow.png")
+    no-repeat center;
+  cursor: pointer;
+  background-size: 4em auto;
+  border-radius: 50%;
+  position: absolute;
+  margin-top: 2vh;
+  margin-left: 97%;
+  z-index: 6;
+  width: 3em;
+  height: 3em;
+}
+.cssite1 {
+  background-color: #33ffff;
+  z-index: 6;
+
+  border: #171717 2px solid;
+}
+.cs1 {
+  background-image: url("file:///C:/Users/tsixl/Documents/vscode/vooPROGueSITE/images/Untitled.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+
+  &:hover {
+    background-image: url("file:///C:/Users/tsixl/Documents/vscode/vooPROGueSITE/images/zombies.jpg");
+    opacity: 0.5;
+  }
+}
+
+.cs2 {
+  background-image: url("file:///C:/Users/tsixl/Documents/vscode/vooPROGueSITE/images/Untitled.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+
+  &:hover {
+    background-image: url("file:///C:/Users/tsixl/Documents/vscode/vooPROGueSITE/images/zombies.jpg");
+    opacity: 0.5;
+  }
+}
+
+.cs3 {
+  background-image: url("file:///C:/Users/tsixl/Documents/vscode/vooPROGueSITE/images/Untitled.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+
+  &:hover {
+    background-image: url("file:///C:/Users/tsixl/Documents/vscode/vooPROGueSITE/images/zombies.jpg");
+    opacity: 0.5;
+  }
+}
+
+.cs4 {
+  background-image: url("file:///C:/Users/tsixl/Documents/vscode/vooPROGueSITE/images/Untitled.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+
+  &:hover {
+    background-image: url("file:///C:/Users/tsixl/Documents/vscode/vooPROGueSITE/images/zombies.jpg");
+    opacity: 0.5;
+  }
+}
+
+.cs5 {
+  background-image: url("file:///C:/Users/tsixl/Documents/vscode/vooPROGueSITE/images/Untitled.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+
+  &:hover {
+    background-image: url("file:///C:/Users/tsixl/Documents/vscode/vooPROGueSITE/images/zombies.jpg");
+    opacity: 0.5;
+  }
+}
+.cs6 {
+  background-image: url("file:///C:/Users/tsixl/Documents/vscode/vooPROGueSITE/images/Untitled.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+
+  &:hover {
+    background-image: url("file:///C:/Users/tsixl/Documents/vscode/vooPROGueSITE/images/zombies.jpg");
+    opacity: 0.5;
+  }
+}
+.cs7 {
+  background-image: url("file:///C:/Users/tsixl/Documents/vscode/vooPROGueSITE/images/Untitled.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+
+  &:hover {
+    background-image: url("file:///C:/Users/tsixl/Documents/vscode/vooPROGueSITE/images/zombies.jpg");
+    opacity: 0.5;
+  }
+}
+
+.cs8 {
+  background-image: url("file:///C:/Users/tsixl/Documents/vscode/vooPROGueSITE/images/Untitled.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+
+  &:hover {
+    background-image: url("file:///C:/Users/tsixl/Documents/vscode/vooPROGueSITE/images/zombies.jpg");
+    opacity: 0.5;
+  }
+}
+.cs9 {
+  background-image: url("file:///C:/Users/tsixl/Documents/vscode/vooPROGueSITE/images/Untitled.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+
+  &:hover {
+    background-image: url("file:///C:/Users/tsixl/Documents/vscode/vooPROGueSITE/images/zombies.jpg");
+    opacity: 0.5;
+  }
+}
+
+.fulleshops {
+  position: absolute;
+
+  margin-left: -99%;
+  background-color: #bfbfbf;
+  width: 98%;
+  height: 97vh;
+  z-index: 5;
+  display: grid;
+  grid-template-columns: 28em 28em 28em;
+  grid-template-rows: 22em 22em;
+  align-content: center;
+  justify-content: center;
+}
+.essite1 {
+  background-color: #33ffff;
+  z-index: 6;
+
+  border: #171717 2px solid;
+}
+.es1 {
+  background-image: url("file:///C:/Users/tsixl/Documents/vscode/vooPROGueSITE/images/Untitled.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+  &:hover {
+    background-image: url("file:///C:/Users/tsixl/Documents/vscode/vooPROGueSITE/images/zombies.jpg");
+    opacity: 0.5;
+  }
+}
+.es2 {
+  background-image: url("file:///C:/Users/tsixl/Documents/vscode/vooPROGueSITE/images/Untitled.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+  &:hover {
+    background-image: url("file:///C:/Users/tsixl/Documents/vscode/vooPROGueSITE/images/zombies.jpg");
+    opacity: 0.5;
+  }
+}
+.es3 {
+  background-image: url("file:///C:/Users/tsixl/Documents/vscode/vooPROGueSITE/images/Untitled.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+  &:hover {
+    background-image: url("file:///C:/Users/tsixl/Documents/vscode/vooPROGueSITE/images/zombies.jpg");
+    opacity: 0.5;
+  }
+}
+.es4 {
+  background-image: url("file:///C:/Users/tsixl/Documents/vscode/vooPROGueSITE/images/Untitled.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+  &:hover {
+    background-image: url("file:///C:/Users/tsixl/Documents/vscode/vooPROGueSITE/images/zombies.jpg");
+    opacity: 0.5;
+  }
+}
+.es5 {
+  background-image: url("file:///C:/Users/tsixl/Documents/vscode/vooPROGueSITE/images/Untitled.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+  &:hover {
+    background-image: url("file:///C:/Users/tsixl/Documents/vscode/vooPROGueSITE/images/zombies.jpg");
+    opacity: 0.5;
+  }
+}
+.es6 {
+  background-image: url("file:///C:/Users/tsixl/Documents/vscode/vooPROGueSITE/images/Untitled.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+  &:hover {
+    background-image: url("file:///C:/Users/tsixl/Documents/vscode/vooPROGueSITE/images/zombies.jpg");
+    opacity: 0.5;
+  }
+}
+
+.close5 {
+  background: url("file:///C:/Users/tsixl/Documents/vscode/vooPROGueSITE/images/backarrow.png")
+    no-repeat center;
+  cursor: pointer;
+  background-size: 4em auto;
+  border-radius: 50%;
+  position: absolute;
+  margin-top: 2vh;
+  margin-left: 97%;
+  z-index: 6;
+  width: 3em;
+  height: 3em;
+}
+
+.close {
+  position: absolute;
+  display: inherit;
+  z-index: 6;
+  margin-top: 2.5%;
+  margin-left: 103%;
+}
+
+#myCarousel1 {
+  width: 98%;
+  height: 91vh;
+  margin-top: 1.5%;
+  margin-left: 10%;
+}
+#myCarousel2 {
+  width: 98%;
+  height: 91vh;
+  margin-top: 1.5%;
+  margin-left: 10%;
+}
+#myCarousel3 {
+  width: 98%;
+  height: 91vh;
+  margin-top: 1.5%;
+  margin-left: 10%;
+}
+#myCarousel4 {
+  width: 98%;
+  height: 91vh;
+  margin-top: 1.5%;
+  margin-left: 10%;
+}
+#myCarousel5 {
+  width: 98%;
+  height: 91vh;
+  margin-top: 1.5%;
+  margin-left: 10%;
+}
+#myCarousel6 {
+  width: 98%;
+  height: 91vh;
+  margin-top: 1.5%;
+  margin-left: 10%;
+}
+#myCarousel7 {
+  width: 98%;
+  height: 91vh;
+  margin-top: 1.5%;
+  margin-left: 10%;
+}
+#myCarousel8 {
+  width: 98%;
+  height: 91vh;
+  margin-top: 1.5%;
+  margin-left: 10%;
+}
+#myCarousel9 {
+  width: 98%;
+  height: 91vh;
+  margin-top: 1.5%;
+  margin-left: 10%;
+}
+#myCarousel101 {
+  width: 98%;
+  height: 91vh;
+  margin-top: 1.5%;
+  margin-left: 10%;
+}
+#myCarousel102 {
+  width: 98%;
+  height: 91vh;
+  margin-top: 1.5%;
+  margin-left: 10%;
+}
+#myCarousel103 {
+  width: 98%;
+  height: 91vh;
+  margin-top: 1.5%;
+  margin-left: 10%;
+}
+#myCarousel104 {
+  width: 98%;
+  height: 91vh;
+  margin-top: 1.5%;
+  margin-left: 10%;
+}
+#myCarousel105 {
+  width: 98%;
+  height: 91vh;
+  margin-top: 1.5%;
+  margin-left: 10%;
+}
+#myCarousel106 {
+  width: 98%;
+  height: 91vh;
+  margin-top: 1.5%;
+  margin-left: 10%;
+}
+
+.container-fluid {
+  display: none;
+  position: absolute;
+  width: 85%;
+  height: 85vh;
+  z-index: 6;
+}
