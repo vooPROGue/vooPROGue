@@ -128,9 +128,9 @@
 
 	var $svg = $('svg').drawsvg();
 	$svg.drawsvg('animate');	
-  $(".toggleMenu").on('click', function(){
-    $("#mainMenu").toggleClass('open');
-
-   });
+ 
   //  end floating menu
  
+
+  
+  
