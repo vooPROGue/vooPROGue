@@ -131,7 +131,9 @@
  
   //  end floating menu
   window.onload=function(){
-
+    const footer = document.createElement("div");
+    document.body.appendChild(footer);
+    footer.classList.add("footer");
     
     
     const portfolioBtn = document.querySelector(".portfolio")
