@@ -122,4 +122,35 @@
           $.data(this, pluginName, new DrawSvg(this, method));
       });
     };
+<<<<<<< Updated upstream
   }));
+=======
+  }));
+
+
+	var $svg = $('svg').drawsvg();
+	$svg.drawsvg('animate');	
+ 
+  //  end floating menu
+
+  window.onload=function(){
+
+    const footer = document.createElement("div");
+    document.body.appendChild(footer);
+    footer.classList.add("footer");
+    const portfolioBtn = document.querySelector(".portfolio")
+    const infoBtn = document.querySelector(".info");
+    const menuBtn = document.querySelector(".menu");
+    menuBtn.addEventListener("click" , showMenu);
+      
+    function showMenu() {
+      portfolioBtn.classList.toggle("portfolio");
+       infoBtn.classList.toggle("info");      
+  
+    }
+
+
+    
+  }
+  
+>>>>>>> Stashed changes

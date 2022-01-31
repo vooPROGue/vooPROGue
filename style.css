@@ -119,6 +119,7 @@ title {
   bottom: 0;
 }
 
+<<<<<<< Updated upstream
 .mainMenuOverlay .toggleMenu {
   display: block;
   background: "./images/menulogo.png" no-repeat center;
@@ -138,6 +139,10 @@ title {
   transition: box-shadow 0.5s ease, top 0.5s ease;
   transition: box-shadow 0.5s ease, top 0.5s ease, -webkit-box-shadow 0.5s ease;
   transition: box-shadow 0.5s ease, top 0.5s ease;
+=======
+.mainMenuOverlay .portfolio {
+  visibility: hidden;
+>>>>>>> Stashed changes
 }
 
 .mainMenuOverlay.open .toggleMenu {
@@ -1012,5 +1017,13 @@ title {
   width: 85%;
   height: 85vh;
   z-index: 6;
+}
+
+.footer {
+  position: absolute;
+  margin-top: 100vh;
+  width: 100vw;
+  height: 30vh;
+  background-color: white;
 }
 /*# sourceMappingURL=style.css.map */

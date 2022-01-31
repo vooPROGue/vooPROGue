@@ -525,9 +525,14 @@ title {
   background-position: center;
   cursor: pointer;
 
+<<<<<<< Updated upstream
   &:hover {
     background-image: url("file:///C:/Users/tsixl/Documents/vscode/vooPROGueSITE/images/zombies.jpg");
     opacity: 0.5;
+=======
+  .portfolio {
+    visibility: hidden;
+>>>>>>> Stashed changes
   }
 }
 
@@ -838,4 +843,17 @@ title {
   width: 85%;
   height: 85vh;
   z-index: 6;
+}
+
+.footer {
+  position: absolute;
+  margin-top: 100vh;
+  width: 100vw;
+  height: 30vh;
+  background-color: white;
+}
+
+@media only screen and (max-width: 600px) {
+  .mainMenuOverlay {
+  }
 }
