@@ -1,6 +1,7 @@
 body {
   background-color: #171717 !important;
   overflow-x: hidden;
+  overflow-y: scroll;
 }
 
 #Layer_1 {
@@ -113,7 +114,8 @@ body {
 
 .menu {
   cursor: pointer;
-  position: fixed;
+  position: -webkit-sticky;
+  position: sticky;
   z-index: 2;
 }
 
