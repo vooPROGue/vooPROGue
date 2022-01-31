@@ -130,7 +130,20 @@
 	$svg.drawsvg('animate');	
  
   //  end floating menu
- 
+  window.onload=function(){
 
+    
+    
+    const portfolioBtn = document.querySelector(".portfolio")
+    const infoBtn = document.querySelector(".info");
+    const menuBtn = document.querySelector(".menu");
+    menuBtn.addEventListener("click" , showMenu);
+      
+    function showMenu() {
+      portfolioBtn.classList.toggle("portfolio");
+       infoBtn.classList.toggle("info");      
   
+    }
+    
+  }
   
