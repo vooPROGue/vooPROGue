@@ -76,8 +76,9 @@ body {
 }
 
 .mainMenuOverlay {
-  background: #171717;
-  position: absolute;
+  background: transparent;
+  position: fixed;
+  z-index: 2;
   left: 0;
   right: 0;
   bottom: 0;

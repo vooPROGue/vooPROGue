@@ -58,8 +58,9 @@ body {
 // }
 
 .mainMenuOverlay {
-  background: $mainbodybgcolor;
-  position: absolute;
+  background: transparent;
+  position: fixed;
+  z-index: 2;
   left: 0;
   right: 0;
   bottom: 0;
@@ -100,4 +101,9 @@ body {
   transform: translateY(100vh);
   width: 100%;
   height: 20vh;
+}
+
+@media screen and (min-width: 768px) {
+  .itemMenuBox {
+  }
 }
