@@ -134,18 +134,26 @@
     const footer = document.createElement("div");
     document.body.appendChild(footer);
     footer.classList.add("footer");
+    const menuBtn = document.querySelector(".menu-button");
+     const btnContainer =document.querySelector(".btn-container");
+     const btnPortfolio = document.querySelector(".portfolio-btn");
+     const btnContact = document.querySelector(".contact-btn");
+
+     menuBtn.addEventListener("click",showMenuBtns);
+
+     function showMenuBtns(){
+
+      btnContainer.classList.toggle("show-btns");
+      console.log("fiwehfio");
+
     
     
-    const portfolioBtn = document.querySelector(".portfolio")
-    const infoBtn = document.querySelector(".info");
-    const menuBtn = document.querySelector(".menu");
-    menuBtn.addEventListener("click" , showMenu);
-      
-    function showMenu() {
-      portfolioBtn.classList.toggle("portfolio");
-       infoBtn.classList.toggle("info");      
   
     }
-    
-  }
+     
+     }
+     
+  
+
+  
   
