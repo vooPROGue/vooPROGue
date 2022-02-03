@@ -88,7 +88,7 @@ body {
   margin: auto;
   width: 13rem;
   height: 7rem;
-  border: solid 2.5px #33ffff;
+  border: solid 2.5px #c0c0c0;
   border-radius: 30px;
 }
 
@@ -116,7 +116,7 @@ body {
 .btn-container .portfolio-btn {
   height: 10rem;
   width: 15rem;
-  border: solid #33ffff 1px;
+  border: solid #c0c0c0 1px;
   border-radius: 60px;
   background: transparent;
   -webkit-transform: skewX(-25deg);
@@ -128,7 +128,7 @@ body {
 .btn-container .contact-btn {
   height: 10rem;
   width: 15rem;
-  border: solid #33ffff 1px;
+  border: solid #c0c0c0 1px;
   background: transparent;
   bottom: 0;
   border-radius: 60px;
