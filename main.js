@@ -19,7 +19,7 @@
 
 
      function showPortfolio(){
-       portfolio.classList.toggle("show-portfolio");
+       portfolio.classList.add("show-portfolio");
        footer.classList.add("close-footer");
      }
      btnContact.addEventListener("click", showContact);
@@ -28,19 +28,44 @@
       contact.classList.toggle("show-contact");
     }
 
-    // const closePortfolio = document.createElement("div");
-    // portfolio.appendChild(closePortfolio);
-    // closePortfolio.classList.add("close-portfolio");
+    const categoriesOverlay = document.createElement("div");
+   portfolio.appendChild(categoriesOverlay);
+   categoriesOverlay.classList.add("categories-overlay");
 
-    // const closeContact = document.createElement("div");
-    // contact.appendChild(closeContact);
-    // closeContact.classList.add("close-contact");
+   const informationOverlay = document.createElement("div");
+   contact.appendChild(informationOverlay);
+   informationOverlay.classList.add("information-overlay");
 
-    const glass = document.createElement("div");
-    portfolio.appendChild(glass);
-    glass.classList.add("glass");
+    const closePortfolio = document.createElement("div");
+    portfolio.appendChild(closePortfolio);
+    closePortfolio.classList.add("close-portfolio");
 
+    const closeContact = document.createElement("div");
+    contact.appendChild(closeContact);
+    closeContact.classList.add("close-contact");
 
+    closePortfolio.addEventListener("click",closePort);
+    closeContact.addEventListener("click",closeCont);
+     
+    function closePort(){
+portfolio.classList.remove("show-portfolio");
+footer.classList.remove("close-footer");
+
+ }
+
+ function closeCont(){
+   contact.classList.remove("show-contact");
+   footer.classList.remove("close-footer");
+
+ }
+
+    const glass1 = document.createElement("div");
+    categoriesOverlay.append(glass1);
+    glass1.classList.add("glass");
+    
+    
+   
+     
     
 
      menuBtn.addEventListener("click",showMenuBtns);
