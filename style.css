@@ -97,6 +97,7 @@ body {
   width: 90%;
   height: 50%;
   margin: auto;
+  pointer-events: none;
 }
 
 .btn-container {
@@ -185,7 +186,8 @@ body {
   display: flex;
   width: 95vw;
   height: 100%;
-  background-color: blueviolet;
+  background: -webkit-gradient(linear, left top, left bottom, from(#212121), to(#143319));
+  background: linear-gradient(#212121, #143319);
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -203,6 +205,12 @@ body {
   border-radius: 40px;
   border-right: 0;
   cursor: pointer;
+  -webkit-animation-name: appear;
+          animation-name: appear;
+  -webkit-animation-delay: 1.6s;
+          animation-delay: 1.6s;
+  -webkit-animation-duration: infinite;
+          animation-duration: infinite;
 }
 
 .portfolio-overlay .close-portfolio:hover {
@@ -267,11 +275,13 @@ body {
   position: absolute;
   height: 50rem;
   width: 25rem;
-  -webkit-box-shadow: -10px -10px 15px #43fa00, 10px -10px 15px #43fa00, -10px 10px 15px #43fa00, 10px 10px 15px #43fa00;
-          box-shadow: -10px -10px 15px #43fa00, 10px -10px 15px #43fa00, -10px 10px 15px #43fa00, 10px 10px 15px #43fa00;
-  position: absolute;
-  border: 2px dotted #212121;
-  border-radius: 20px;
+  background: rgba(65, 221, 8, 0.15);
+  -webkit-box-shadow: 0 8px 32px 0 rgba(10, 88, 10, 0.67);
+          box-shadow: 0 8px 32px 0 rgba(10, 88, 10, 0.67);
+  backdrop-filter: blur(7px);
+  -webkit-backdrop-filter: blur(7px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
   cursor: pointer;
 }
 

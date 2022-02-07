@@ -66,6 +66,7 @@ body {
     width: 90%;
     height: 50%;
     margin: auto;
+    pointer-events: none;
   }
 }
 
@@ -133,7 +134,7 @@ body {
     display: flex;
     width: 95vw;
     height: 100%;
-    background-color: blueviolet;
+    background: linear-gradient(#212121, rgb(20, 51, 25));
     flex-direction: column;
     justify-content: center;
   }
@@ -141,10 +142,14 @@ body {
     width: 5vw;
     height: 100vh;
     background-color: red;
+
     opacity: 0.3;
     border-radius: 40px;
     border-right: 0;
     cursor: pointer;
+    animation-name: appear;
+    animation-delay: 1.6s;
+    animation-duration: infinite;
     &:hover {
       opacity: 1;
     }
@@ -194,11 +199,13 @@ body {
   position: absolute;
   height: 50rem;
   width: 25rem;
-  box-shadow: -10px -10px 15px #43fa00, 10px -10px 15px #43fa00,
-    -10px 10px 15px #43fa00, 10px 10px 15px #43fa00;
-  position: absolute;
-  border: 2px dotted #212121;
-  border-radius: 20px;
+  background: rgba(65, 221, 8, 0.15);
+  box-shadow: 0 8px 32px 0 rgba(10, 88, 10, 0.67);
+  backdrop-filter: blur(7px);
+  -webkit-backdrop-filter: blur(7px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+
   cursor: pointer;
   &:hover {
     transform: scale(1.1);

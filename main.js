@@ -16,16 +16,18 @@
      contact.classList.add("contact-overlay");
 
      btnPortfolio.addEventListener("click", showPortfolio);
-
-
+    
      function showPortfolio(){
        portfolio.classList.add("show-portfolio");
        footer.classList.add("close-footer");
+       closePortfolio.classList.add(".show");
+
      }
      btnContact.addEventListener("click", showContact);
      
      function showContact(){
       contact.classList.toggle("show-contact");
+      footer.classList.add("close-footer");
     }
 
     const categoriesOverlay = document.createElement("div");
