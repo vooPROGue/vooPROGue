@@ -64,6 +64,22 @@ footer.classList.remove("close-footer");
     const glass1 = document.createElement("div");
     categoriesOverlay.append(glass1);
     glass1.classList.add("glass");
+    glass1.id = "glass1";
+    
+    const glass2 = document.createElement("div");
+    categoriesOverlay.append(glass2);
+    glass2.classList.add("glass");
+    glass2.id = "glass2";
+
+    const glass3 = document.createElement("div");
+    categoriesOverlay.append(glass3);
+    glass3.classList.add("glass");
+    glass3.id = "glass3";
+
+    const glass4 = document.createElement("div");
+    categoriesOverlay.append(glass4);
+    glass4.classList.add("glass");
+    glass4.id = "glass4";
     
     
    

@@ -188,13 +188,21 @@ body {
   height: 100%;
   background: -webkit-gradient(linear, left top, left bottom, from(#212121), to(#143319));
   background: linear-gradient(#212121, #143319);
-  -webkit-box-orient: vertical;
+  -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-left: 5%;
+  padding-right: 5%;
+  top: 0;
+  bottom: 0;
+  margin: auto;
 }
 
 .portfolio-overlay .close-portfolio {
@@ -272,8 +280,7 @@ body {
 }
 
 .glass {
-  position: absolute;
-  height: 50rem;
+  height: 55rem;
   width: 25rem;
   background: rgba(65, 221, 8, 0.15);
   -webkit-box-shadow: 0 8px 32px 0 rgba(10, 88, 10, 0.67);
@@ -288,6 +295,21 @@ body {
 .glass:hover {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
+  -webkit-box-shadow: 0 18px 62px 0 rgba(10, 88, 10, 0.67);
+          box-shadow: 0 18px 62px 0 rgba(10, 88, 10, 0.67);
+  backdrop-filter: blur(7px);
+  -webkit-backdrop-filter: blur(7px);
+}
+
+#glass1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: -5%;
+}
+
+#glass3 {
+  margin-top: -5%;
 }
 
 @media screen and (max-width: 768px) {
