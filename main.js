@@ -10,6 +10,12 @@
     const portfolio = document.createElement("div");
      document.body.appendChild(portfolio);
      portfolio.classList.add("portfolio-overlay");
+    //  const portbgimage = document.createElement("img");
+    //  portbgimage.src = "./images/0101dot01.svg";
+    //  portfolio.appendChild(portbgimage);
+
+    //  portfolio.appendChild(portbgimage);
+    //  portbgimage.classList.add("portbgimage");
 
      const contact = document.createElement("div");
      document.body.appendChild(contact);

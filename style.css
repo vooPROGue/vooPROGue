@@ -167,7 +167,6 @@ body {
   z-index: 3;
   position: fixed;
   height: 100vh;
-  background-color: #212121;
   margin-left: -110%;
   -webkit-transition: all 1.5s linear;
   transition: all 1.5s linear;
@@ -178,6 +177,11 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  background: url("./images/dotdotdot_animated.svg");
+}
+
+.portfolio-overlay .portbgimage {
+  position: absolute;
 }
 
 .portfolio-overlay .categories-overlay {
@@ -186,8 +190,7 @@ body {
   display: flex;
   width: 95vw;
   height: 100%;
-  background: -webkit-gradient(linear, left top, left bottom, from(#212121), to(#143319));
-  background: linear-gradient(#212121, #143319);
+  background: transparent;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
