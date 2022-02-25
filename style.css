@@ -177,11 +177,8 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  background: url("./images/dotdotdot_animated.svg");
-}
-
-.portfolio-overlay .portbgimage {
-  position: absolute;
+  background: url("./images/backgroundsvg.svg") no-repeat center;
+  background-size: cover;
 }
 
 .portfolio-overlay .categories-overlay {

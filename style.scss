@@ -128,10 +128,8 @@ body {
   transition: all 1.5s linear;
   justify-content: flex-start;
   flex-direction: row;
-  background: url("./images/dotdotdot_animated.svg");
-  .portbgimage {
-    position: absolute;
-  }
+  background: url("./images/backgroundsvg.svg") no-repeat center;
+  background-size: cover;
 
   .categories-overlay {
     display: flex;
